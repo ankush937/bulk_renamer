@@ -1,14 +1,6 @@
 import os
 
 def bulk_rename_files(directory, new_base_name):
-    """
-    Renames all image files in a specified directory to a consistent,
-    numbered pattern while preserving their original extensions.
-
-    Args:
-        directory (str): The file path to the folder containing images.
-        new_base_name (str): The new base name for the files (e.g., "product").
-    """
     
     image_extensions = ('.jpg', '.jpeg', '.png', '.webp', '.gif', '.bmp', '.tiff')
     
@@ -53,5 +45,6 @@ def bulk_rename_files(directory, new_base_name):
 
 TARGET_FOLDER = os.path.dirname(os.path.abspath(__file__))
 NEW_PREFIX = "indikraft_product"
+
 
 bulk_rename_files(TARGET_FOLDER, NEW_PREFIX)
